@@ -3964,7 +3964,7 @@ var requirejs, require, define;
 
                                         function i(e) {
                                             if (!this.active) return;
-                                            document.title = app.sections.currId == "alphabet" ? "Keep Portland Wierd: " + siteSettings.alphabet[app.alphabet.currSlide].title : "Keep Portland Wierd: Earthquake Preparedness", history.pushState({
+                                            document.title = app.sections.currId == "alphabet" ? "RECUPERA JÁ!: Recuperação de Crédito" + siteSettings.alphabet[app.alphabet.currSlide].title : "RECUPERA JÁ!: Recuperação de Crédito", history.pushState({
                                                 sections: app.sections.currSlide,
                                                 alphabet: app.alphabet.currSlide
                                             }, e, this.baseURL + e)
