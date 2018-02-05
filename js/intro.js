@@ -219,19 +219,19 @@ function createClouds() {
         img: "images/home/cloud-lrg.png",
         dimensions: {
             w: 405,
-            h: 16
+            h: 160
         }
     }, {
         img: "images/home/cloud-med.png",
         dimensions: {
             w: 250,
-            h: 16
+            h: 130
         }
     }, {
         img: "images/home/cloud-sml.png",
         dimensions: {
-            w: 154,
-            h: 16
+            w: 254,
+            h: 100
         }
     }], c = [], d = 11, e = 0; d > e; e++) {
         var f = document.createElement("img"),

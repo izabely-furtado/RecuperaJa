@@ -596,7 +596,7 @@ body {
 
 .letter .lBottomBar .letterBottomContent .letterBottomContentLower .letterBody
 	{
-	width: 30em;
+	/*width: 30em;*/
 	max-width: 100%;
 	font-size: .07em;
 	letter-spacing: 0.03em
@@ -639,7 +639,7 @@ body {
 	top: 0px;
 	left: 0px;
 	font-size: 12px;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.07em;
 	-webkit-font-smoothing: antialiased;
 	width: 130px;
 	text-align: center;
@@ -1406,7 +1406,7 @@ body {
 }
 
 #grid ul li#gridClose #gridCloseCover2 {
-	background: #112c3f
+	background: #000
 }
 
 #grid ul li#gridClose #gridCloseIcon {
@@ -1425,7 +1425,7 @@ body {
 
 #grid ul li#gridInfo {
 	background: url(../images/content-bg-tile.jpg);
-	color: #112c3f;
+	color: #000;
 	padding-top: 0.7em;
 	font-size: 0.2em
 }
@@ -1798,9 +1798,9 @@ body.scroll #wrapper {
 	position: relative;
 	top: -0.08em;
 	text-align: right;
-	font-size: 7.5em;
+	font-size: 5em;
 	line-height: 1em;
-	letter-spacing: 0.07em
+	/*letter-spacing: 0.07em*/
 }
 
 #aboutTheSite #aboutBottom #aboutBottomContent #aboutBottomContentBody {
@@ -2013,7 +2013,7 @@ body.scroll #wrapper {
 	width: 9em;
 	max-width: 100%;
 	margin: 0 auto;
-	color: #112c3f;
+	color: #C93214;
 	text-align: center
 }
 
@@ -2060,7 +2060,7 @@ body.scroll #wrapper {
 	letter-spacing: 0.1em;
 	line-height: 1.3em;
 	padding: 3em 4%;
-	color: #677887;
+	color: #000;
 	text-transform: uppercase
 }
 
@@ -2110,7 +2110,7 @@ body.scroll #wrapper {
 	text-align: center;
 	padding-top: 1.35em;
 	font-size: .17em;
-	color: #fdf2d3
+	color: #00D4FC
 }
 
 #home #homeContent #homeContentBottom #homeContentEnterBtn #homeContentEnterLabel div
@@ -2148,7 +2148,7 @@ body.scroll #wrapper {
 	width: .35em;
 	height: .35em;
 	border-radius: .5em;
-	background-color: #fdf2d3
+	background-color: #00D4FC
 }
 
 #home #homeContent #homeContentBottom #homeContentEnterBtn #homeContentEnterLabel:before
@@ -2166,13 +2166,13 @@ body.scroll #wrapper {
 	text-decoration: none;
 	padding-top: 10px;
 	display: block;
-	color: #8495af;
+	color: #000;
 	font-size: 0.15em;
 	letter-spacing: 0.2em
 }
 
 #home #homeContent #homeContentBottom #homeContentAboutBtn:hover {
-	color: #335d84
+	color: #C93214
 }
 
 [data-icon]:before {

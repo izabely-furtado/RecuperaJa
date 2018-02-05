@@ -1,62 +1,5 @@
-/**
-* @license almond 0.3.1 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
-* Available via the MIT or new BSD license.
-* see: http://github.com/jrburke/almond for details
-*/
-/*!
-* jQuery JavaScript Library v1.11.3
-* http://jquery.com/
-*
-* Includes Sizzle.js
-* http://sizzlejs.com/
-*
-* Copyright 2005, 2014 jQuery Foundation, Inc. and other contributors
-* Released under the MIT license
-* http://jquery.org/license
-*
-* Date: 2015-04-28T16:19Z
-*/
-/*!
-* Sizzle CSS Selector Engine v2.2.0-pre
-* http://sizzlejs.com/
-*
-* Copyright 2008, 2014 jQuery Foundation, Inc. and other contributors
-* Released under the MIT license
-* http://jquery.org/license
-*
-* Date: 2014-12-16
-*/
-/*!
-* mustache.js - Logic-less {{mustache}} templates with JavaScript
-* http://github.com/janl/mustache.js
-*/
-/*!
-*  howler.js v1.1.26
-*  howlerjs.com
-*
-*  (c) 2013-2015, James Simpson of GoldFire Studios
-*  goldfirestudios.com
-*
-*  MIT License
-*/
-/**
-* @license RequireJS text 2.0.14 Copyright (c) 2010-2014, The Dojo Foundation
-*          All Rights Reserved. Available via the MIT or new BSD license. see:
-*          http://github.com/requirejs/text for details
-*/
 /*
-* ! VERSION: 1.17.0 DATE: 2015-05-27 UPDATES AND DOCS AT: http://greensock.com
-* 
-* Includes all of the following: TweenLite, TweenMax, TimelineLite,
-* TimelineMax, EasePack, CSSPlugin, RoundPropsPlugin, BezierPlugin, AttrPlugin,
-* DirectionalRotationPlugin
-* 
-* @license Copyright (c) 2008-2015, GreenSock. All rights reserved. This work
-* is subject to the terms at http://greensock.com/standard-license or for Club
-* GreenSock members, the software agreement that was issued with your
-* membership.
-* 
-* @author: Jack Doyle, jack@greensock.com
+* @author: Izabely Furtado, izabely.correa@pdcase.com.br
 */
 var requirejs, require, define;
 (function (e) {
@@ -3984,8 +3927,8 @@ var requirejs, require, define;
                                             for (var l = 0; l < e.length; l++) n = document.createElement("div"), n.className = "gridCover1", o = document.createElement("div"), o.className = "gridCover2", u = document.createElement("div"), u.className = "gridLabel", a = document.createElement("div"), a.className = "gridLabelUnderline", u.innerHTML = siteSettings.alphabet[l].id, e[l].innerHTML = "", e[l].appendChild(o), e[l].appendChild(n), n.appendChild(u), n.appendChild(a), o.style.background = siteSettings.alphabet[l].gridColor, e[l].style.background = "url(images/gridImages.jpg)", f = {
                                                 id: siteSettings.alphabet[l].id,
                                                 imgPos: {
-                                                    x: l % 4,
-                                                    y: Math.floor(l / 4)
+                                                    x: l % 6,
+                                                    y: Math.floor(l / 6)
                                                 },
                                                 btn: e[l],
                                                 label: u,
@@ -4892,7 +4835,7 @@ var requirejs, require, define;
         function r() {
             this.active = !1, this.container = document.getElementById("home"), this.content = document.getElementById("homeContent"), this.topContent = document.getElementById("homeContentTop"), this.topContentTitle = document.getElementById("homeContentTitle"), this.topContentSubtitle = document.getElementById("homeContentSubtitle"), this.bottomContent = document.getElementById("homeContentBottom"), this.bottomContentIntro = document.getElementById("homeContentIntro"), this.bottomContentEnterBtn = document.getElementById("homeContentEnterBtn"), this.bottomContentAboutBtn = document.getElementById("homeContentAboutBtn"), this.cloudsContainer = document.getElementById("homeClouds"), this.homeBg = document.getElementById("homeBg"), this.homeForeground = document.getElementById("homeForeground"), this.homeForeground.style.visibility = "hidden", this.foreground = s(this.homeForeground, "img", {
                 id: "homeBgForeground",
-                src: "images/home/foreground.png"
+                src: "images/home/teste.png"
             }), this.homeboy = s(this.homeForeground, "img", {
                 id: "homeBgHomeboy",
                 src: "images/home/homeboy.png"
@@ -4900,7 +4843,7 @@ var requirejs, require, define;
                 id: "homeBgSignContainer"
             }), this.sign = s(this.signContainer, "img", {
                 id: "homeBgSign",
-                src: "images/home/sign.png"
+                src: "images/home/placa.png"
             }), this.boatContainer = s(this.homeForeground, "div", {
                 id: "boatContainer"
             }), this.boat = s(this.boatContainer, "img", {
@@ -4971,7 +4914,7 @@ var requirejs, require, define;
                 path: "images/home/homeboy.png"
             }, {
                 id: "homesign",
-                path: "images/home/sign.png"
+                path: "images/home/placa.png"
             }, {
                 id: "homefx",
                 path: "images/home/fx.png"
@@ -4980,19 +4923,19 @@ var requirejs, require, define;
                 img: "images/home/cloud-lrg.png",
                 dimensions: {
                     w: 405,
-                    h: 16
+                    h: 160
                 }
             }, {
                 img: "images/home/cloud-med.png",
                 dimensions: {
                     w: 250,
-                    h: 16
+                    h: 130
                 }
             }, {
                 img: "images/home/cloud-sml.png",
                 dimensions: {
-                    w: 154,
-                    h: 16
+                    w: 254,
+                    h: 100
                 }
             }];
             this.introDelay = 0, this.w = 0, this.sceneScale = 1, this.cloudSpeed = 55e-5, this.clouds = [];
@@ -5217,7 +5160,7 @@ var requirejs, require, define;
                 var g = Math.round((t - o - d) * .4);
                 this.content.style.top = Math.max(u, g) + "px"
             }
-            this.homeboy.style.bottom = 71 * n + "px", this.homeboy.style.left = Math.max(0, 200 * n + s) + "px", this.homeboy.style.width = 133 * n + "px", this.homeboy.style.height = 132 * n + "px", this.boatWater.style.bottom = "0px", this.boatWater.style.left = Math.max(0, 1362 * n + s) + "px", this.boatWater.style.width = 190 * n + "px", this.boatWater.style.height = 35 * n + "px", this.boat.style.bottom = 30 * n + "px", this.boat.style.left = Math.max(0, 1382 * n + s) + "px", this.boat.style.width = 134 * n + "px", this.boat.style.height = 114 * n + "px", this.cloudsContainer.style.height = t - o + "px", this.cloudsContainer.style.fontSize = n * 100 + "px", this.sceneScale = n, this.boatContainer.style.fontSize = this.boatSmoke.style.fontSize = 100 * n + "px", this.signContainer.style.height = 44 * n + "px", this.signContainer.style.width = 64 * n + "px", this.signContainer.style.bottom = 162 * n + "px", this.signContainer.style.left = 940 * n + s + "px", this.fire1.position(s + 315 * n, t - 254 * n, n), this.fire2.position(s + 386 * n, t - 271 * n, n), this.fire3.position(s + 421 * n, t - 322 * n, n), this.fire4.position(s + 355 * n, t - 392 * n, n), this.smoke1.position(s + 340 * n, t - 445 * n, n), this.smoke11.position(s + 340 * n, t - 445 * n, n), this.smoke2.position(s + 1482 * n, t - 108 * n, n), this.smoke22.position(s + 1482 * n, t - 108 * n, n)
+            this.homeboy.style.bottom = 71 * n + "px", this.homeboy.style.left = Math.max(0, 200 * n + s) + "px", this.homeboy.style.width = 133 * n + "px", this.homeboy.style.height = 132 * n + "px", this.boatWater.style.bottom = "0px", this.boatWater.style.left = Math.max(0, 1362 * n + s) + "px", this.boatWater.style.width = 190 * n + "px", this.boatWater.style.height = 35 * n + "px", this.boat.style.bottom = 30 * n + "px", this.boat.style.left = Math.max(0, 1382 * n + s) + "px", this.boat.style.width = 134 * n + "px", this.boat.style.height = 114 * n + "px", this.cloudsContainer.style.height = t - o + "px", this.cloudsContainer.style.fontSize = n * 100 + "px", this.sceneScale = n, this.boatContainer.style.fontSize = this.boatSmoke.style.fontSize = 100 * n + "px", this.signContainer.style.height = 40 * n + "px", this.signContainer.style.width = 82 * n + "px", this.signContainer.style.bottom = 162 * n + "px", this.signContainer.style.left = 940 * n + s + "px", this.fire1.position(s + 315 * n, t - 254 * n, n), this.fire2.position(s + 386 * n, t - 271 * n, n), this.fire3.position(s + 421 * n, t - 322 * n, n), this.fire4.position(s + 355 * n, t - 392 * n, n), this.smoke1.position(s + 340 * n, t - 445 * n, n), this.smoke11.position(s + 340 * n, t - 445 * n, n), this.smoke2.position(s + 1482 * n, t - 108 * n, n), this.smoke22.position(s + 1482 * n, t - 108 * n, n)
         }
         var t = [{
             x: 1,
@@ -6008,10 +5951,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.27",
                                             contentColor: "#37618b",
                                             accentColor: "#fec870",
-                                            title: "American Spirits",
+                                            title: "Carteira de Créditos",
                                             titleOffset: "0",
                                             subtitle: "37x Cartons",
-                                            description: "With all the dust in the air, you don’t want to further tarnish your lungs with generic brand smokes."
+                                            description: "Na administração de carteiras de crédito a aplicação de regras padrões para tratamento da inadimplência é essencial para preservação do relacionamento com clientes, ao mesmo tempo evitando abusos nos contatos para regularização de atrasos de pagamentos."
                                         }, {
                                             id: "b",
                                             gridColor: "#c95031",
@@ -6026,10 +5969,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.20",
                                             contentColor: "#c95031",
                                             accentColor: "#f5b38c",
-                                            title: "Brunch",
+                                            title: "Régua de Cobrança",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "Earthquake be damned, brunch will find a way. Powdered eggs? Jerky Hash? Figure it out and stock up."
+                                            description: "O princípio de réguas de cobrança estabelece sequencia de processos padrões para encaminhamento de cobrança administrativa. Nessa fase ainda não estão ativadas as ações judiciais, que oneram os custos e demandam maior tempo de realização de cobranças."
                                         }, {
                                             id: "c",
                                             gridColor: "#00b3ad",
@@ -6044,10 +5987,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.21",
                                             contentColor: "#02b1ac",
                                             accentColor: "#112c3f",
-                                            title: "Crochet Hook",
+                                            title: "Ações de Cobrança",
                                             titleOffset: "-0.03",
                                             subtitle: "37x Cartons",
-                                            description: "Add a touch of whimsy to the wreckage by yarn bombing the shit out of it."
+                                            description: "Através da definição de ações de cobrança é feita a programação de contatos para regularização de prestações em atraso, na qual pode ser aumentada a severidade processual, que pode desembocar em restrição juntos os serviços de proteção ao crédito(SPC/SERASA)."
                                         }, {
                                             id: "d",
                                             gridColor: "#b2c8d3",
@@ -6062,10 +6005,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.23",
                                             contentColor: "#65141b",
                                             accentColor: "#b2c8d3",
-                                            title: "Dulse",
+                                            title: "Trâmite de Ações",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "Reasearchers at Oregon State developed this strain of seaweed that tastes like bacon. God exists. See: B"
+                                            description: "Dentro do trâmite das ações de cobrança é permitido que o próprio agente cobrador possa encaminhar solicitações de acordo ou renegociações dentro dos limites definidos na política de crédito. Todos os contatos e ações executadas ou não fazem parte de dossiê de cliente, que permite avaliar a real situação no foco de Recuperação de Crédito."
                                         }, {
                                             id: "e",
                                             gridColor: "#ff897b",
@@ -6079,10 +6022,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.16",
                                             contentColor: "#ab422f",
                                             accentColor: "#c6d09e",
-                                            title: "Elements of Style",
+                                            title: "Relatório Gerencial",
                                             titleOffset: "-0.06",
                                             subtitle: "37x Cartons",
-                                            description: "Now that you have time to work on your writing, you'll want to get the grammar right in your Fight Club x Ramona Quimby crossover fic."
+                                            description: "Acompanhamento personalizado que permite dar uma visão de performance de recuperação de créditos em atraso."
                                         }, {
                                             id: "f",
                                             gridColor: "#154142",
@@ -6097,9 +6040,9 @@ var requirejs, require, define;
                                             underlineWidth: "0.15",
                                             contentColor: "#154142",
                                             accentColor: "#8db1b1",
-                                            title: "French Press",
+                                            title: "Cobradoras",
                                             titleOffset: "-0.06",
-                                            description: "Because instant coffee isn't going to cut it. What are we animals?"
+                                            description: "Empresas terceirizadas utilizadas como estratégia de cobrança são gerenciadas para recuperação de crédito para qual é atribuída a responsabilidade de cobrar os contratos em atraso a ela designados."
                                         }, {
                                             id: "g",
                                             gridColor: "#959a9e",
@@ -6113,10 +6056,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.27",
                                             contentColor: "#5b5f63",
                                             accentColor: "#ff897b",
-                                            title: "Glue gun",
+                                            title: "Filiais de Cobrança",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "You can sell or barter your hand-crafted rubble art at the Saturday Market."
+                                            description: "Agências do Banese com todas as informações que servirão de base para execução de outras funcionalidades, como por exemplo, email à pessoa responsável pela Cobrança."
                                         }, {
                                             id: "h",
                                             gridColor: "#6d8746",
@@ -6131,10 +6074,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.24",
                                             contentColor: "#6b3922",
                                             accentColor: "#c6d09e",
-                                            title: "Hops",
+                                            title: "Canal de Cobrança",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "Did you get through your microbrew stash a little too fast? Brew your own, then see if your friends can guess the IBU!"
+                                            description: "O gerenciamento é feio através de um Canal de Cobrança, onde o usuário com permissão de acesso ao sistema pode ou não possuir alçada para conceder desconto no momento das negociações. Ex: Agência, Call Center, Jurídico, etc."
                                         }, {
                                             id: "i",
                                             gridColor: "#887942",
@@ -6149,10 +6092,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.07",
                                             contentColor: "#887942",
                                             accentColor: "#fdc76d",
-                                            title: "Innertubes",
+                                            title: "Acompanhamento",
                                             titleOffset: "-0.06",
                                             subtitle: "37x Cartons",
-                                            description: "You'll have the last laugh when you unicycle past your enemies in the nude."
+                                            description: "Possibilitamos a geração de informações de acompanhamento das cobranças realizadas canais de cobrança responsáveis. Administra seus processos de Cobrança e Fecha Acordos!"
                                         }, {
                                             id: "j",
                                             gridColor: "#fdc76d",
@@ -6167,10 +6110,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.15",
                                             contentColor: "#112c3f",
                                             accentColor: "#fdc76d",
-                                            title: "Jorts",
+                                            title: "Métodos Usados",
                                             titleOffset: "0.03",
                                             subtitle: "37x Cartons",
-                                            description: "Eventually everyone’s jeans will get so tattered that they’ll cut them into jorts, but you’ll have done it before it was cool."
+                                            description: "Ligação Telefônica, SMS, Empresas Cobradoras Terceirizadas, Compra de Dívidas, Renegociação..."
                                         }, {
                                             id: "k",
                                             gridColor: "#112c3f",
@@ -6185,10 +6128,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.24",
                                             contentColor: "#345e86",
                                             accentColor: "#b2c8d3",
-                                            title: "Kale Chips",
+                                            title: "Comunicação Eletrônica",
                                             titleOffset: "-0.06",
                                             subtitle: "37x Cartons",
-                                            description: "These will give you your daily dose of superfood while you wait to harvest the fresh kale. It's also hilarious to eat crunchy food while you cry."
+                                            description: "A negociação de pagamento pode ser feita através dos equipamentos eletrônicos do Banco, para comunicados a clientes inadimplentes de sua dívida."
                                         }, {
                                             id: "l",
                                             gridColor: "#65141b",
@@ -6202,10 +6145,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.15",
                                             contentColor: "#ab422f",
                                             accentColor: "#f1955f",
-                                            title: "Libations",
+                                            title: "Correspondência",
                                             titleOffset: "-0.06",
                                             subtitle: "37x Cartons",
-                                            description: "In the old days, they did a shot before having a limb sawed off. You'll dull the pain with a sazerac."
+                                            description: "Documentos padrões a serem endereçados aos clientes na forma de correspondências. Isto é, aviso que descrevem ações já realizadas pelo banco, dando ciência dos custos já assumidos pelo banco, inclusão no SPC/SERASA e Ação Judicial."
                                         }, {
                                             id: "m",
                                             gridColor: "#c95031",
@@ -6220,10 +6163,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.33",
                                             contentColor: "#6b3922",
                                             accentColor: "#f3d0cc",
-                                            title: "Mustache Wax",
+                                            title: "Índice Financeiro",
                                             titleOffset: "-0.02",
                                             subtitle: "37x Cartons",
-                                            description: "Are you a dapper lumbersexual? Keep it up! Just also learn some actual outdoors skills."
+                                            description: "Permite o cadastro e manutenção de Índice Financeiro. Após a inclusão o sistema automaticamente atualiza a cotação. É possível também a atualização de forma manual da cotação, determinando seu percentual e período de vigência."
                                         }, {
                                             id: "n",
                                             gridColor: "#8db1b1",
@@ -6238,10 +6181,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.27",
                                             contentColor: "#154142",
                                             accentColor: "#dfe8e8",
-                                            title: "Nugs",
+                                            title: "Monitoramento de Metas",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "It could be medicinal, it could be recreational, and it could also be the new currency."
+                                            description: "Exibe as metas alcançadas pelas Cobradoras por período de validade da meta, conforme montante de valor dos contratos recuperados pagos."
                                         }, {
                                             id: "o",
                                             gridColor: "#00b3ad",
@@ -6256,10 +6199,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.28",
                                             contentColor: "#00b3ad",
                                             accentColor: "#eae7be",
-                                            title: "Odor Control",
+                                            title: "Instrumento Contratual",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "Showers will be scarce and that crystal you've been rubbing on your pits isn't going to cut it anymore. (Not that it cut it in the first place.) See: P"
+                                            description: "Modelos de contrato para renegociação registrando cláusulas, condições e cronograma de vencimentos do contrato."
                                         }, {
                                             id: "p",
                                             gridColor: "#c6d09e",
@@ -6273,10 +6216,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.19",
                                             contentColor: "#6b3922",
                                             accentColor: "#b7a0ba",
-                                            title: "Patchouli",
+                                            title: "Redistribuição de Clientes",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "A must-have in your personal apothecary. Not only is the scent calming, but it will help you put out the vibe at your drum circle."
+                                            description: "Permite ao gestor realizar a redistribuição de clientes entre as cobradoras ativas no sistema"
                                         }, {
                                             id: "q",
                                             gridColor: "#00b3ad",
@@ -6291,10 +6234,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.30",
                                             contentColor: "#00b3ad",
                                             accentColor: "#fdc76d",
-                                            title: "Quinoa",
+                                            title: "Soluções à Renegociação",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "You weren't thinking of stocking rice, were you? Your world may be falling to pieces, but that's no reason to eat empty carbs."
+                                            description: "Processo de Política de Renegociação que permite o vínculo da Linha de Renegociação ao produto de crédito, complementando o conjunto de regras adotadas para uma renegociação."
                                         }, {
                                             id: "r",
                                             gridColor: "#c95031",
@@ -6309,10 +6252,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.22",
                                             contentColor: "#345e86",
                                             accentColor: "#b2c8d3",
-                                            title: "Russian Novels",
+                                            title: "Ocorrência de Títulos",
                                             titleOffset: "-0.06",
                                             subtitle: "37x Cartons",
-                                            description: "After your friends die in the quake you’ll want to know why this is all tragically beautiful."
+                                            description: "Permite a emissão de relatório com informações de contratos na fase de retorno de ocorrências no processo de protesto, ou seja, Título aceito no cartório. Conforme retorno de arquivo e com a situação de protesto devolvido, o sistema identifica os títulos que estão na situação de acordo com o filtro de pesquisa selecionado."
                                         }, {
                                             id: "s",
                                             gridColor: "#6b3922",
@@ -6327,10 +6270,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.19",
                                             contentColor: "#6b3922",
                                             accentColor: "#f5b38c",
-                                            title: "Seed Bombs",
+                                            title: "Títulos Não-Processados",
                                             titleOffset: "-0.03",
                                             subtitle: "37x Cartons",
-                                            description: "Everything you need to make pico de gallo - but you throw it!"
+                                            description: "Permite a pesquisa e emissão de relatório com informações de contratos enviados via arquivo para execução de protesto. O cartório recebe o arquivo e processa a leitura do mesmo, conforme a identificação de alguma irregularidade de algum registro, este retorna com a informação do código(s) da(s) irregularidade(s)."
                                         }, {
                                             id: "t",
                                             gridColor: "#221e1f",
@@ -6345,10 +6288,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.19",
                                             contentColor: "#5b6063",
                                             accentColor: "#eae7be",
-                                            title: "Typewriter",
+                                            title: "Acesso ao Sistema",
                                             titleOffset: "0",
                                             subtitle: "37x Cartons",
-                                            description: "To keep your blog going. Do these things come in futura?"
+                                            description: "O Sistema de Recuperação de Crédito será utilizado pelas áreas gestoras, gerentes das áreas de negócio (agências), usuários comuns da ARCRE, cobradoras de crédito, Call Center e diretoria, conforme suas permissões de acesso, que variam de acordo com suas necessidades e características específicas."
                                         }, {
                                             id: "u",
                                             gridColor: "#f38eae",
@@ -6363,10 +6306,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.24",
                                             contentColor: "#221e1f",
                                             accentColor: "#ecb1c5",
-                                            title: "Ukelele",
+                                            title: "Cadastros Básicos",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "Remember when no one came to your open mic performance? Their calendars are clear now."
+                                            description: "Para o perfeito funcionamento do sistema parametrizações básicas serão realizadas que permitem a manutenção dos parâmetros globais do sistema."
                                         }, {
                                             id: "v",
                                             gridColor: "#ab422f",
@@ -6380,10 +6323,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.26",
                                             contentColor: "#345e86",
                                             accentColor: "#8295af",
-                                            title: "Victrola",
+                                            title: "Política de Cobrança",
                                             titleOffset: "-0.02",
                                             subtitle: "37x Cartons",
-                                            description: "DJs can still crank out sweet tunes and tone their arms at the same time."
+                                            description: "São cadastrados alguns parâmetros globais do sistema utilizados para o processo de recuperação do crédito, tornando o processo de recuperação mais eficaz."
                                         }, {
                                             id: "w",
                                             gridColor: "#221e1f",
@@ -6416,10 +6359,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.28",
                                             contentColor: "#221e1f",
                                             accentColor: "#ecb1c5",
-                                            title: "Xanax",
+                                            title: "Execução",
                                             titleOffset: "0.02",
                                             subtitle: "37x Cartons",
-                                            description: "Stressful times call for pharmaceuticals. If you're a millennial, you'll want to stockpile your Adderall. "
+                                            description: "De acordo com os perfis de usuários definido nos PROCEDIMENTOS DE COBRANÇA DE INADIMPLENTES são designadas ações a serem feitas de acordo com as características de saldo e maior tempo de atraso da dívida."
                                         }, {
                                             id: "y",
                                             gridColor: "#b2c8d3",
@@ -6434,10 +6377,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.26",
                                             contentColor: "#345e86",
                                             accentColor: "#b2c8d3",
-                                            title: "Yoga pants",
+                                            title: "Cobrança",
                                             titleOffset: "0",
                                             subtitle: "37x Cartons",
-                                            description: "Appropriate for exercise or just running errands around the FEMA tents with your $600 jogging stroller."
+                                            description: "Visualizando informações do clientes e negociando contratos em atraso."
                                         }, {
                                             id: "z",
                                             gridColor: "#8495af",
@@ -6451,10 +6394,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.23",
                                             contentColor: "#c64f30",
                                             accentColor: "#f1955f",
-                                            title: "Zepplin",
+                                            title: "Relatório Operacional",
                                             titleOffset: "0",
                                             subtitle: "37x Cartons",
-                                            description: "If you can't cut it in the new Portland landscape, you can fly away to Austin. And what could be a weirder way to leave?"
+                                            description: "Acompanhamento personalizado que permite dar uma visão operacional do trabalho de COBRANÇA."
                                         }];
                                         e.siteSettings = {
                                             alphabet: t
