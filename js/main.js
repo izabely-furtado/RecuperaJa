@@ -4835,7 +4835,7 @@ var requirejs, require, define;
         function r() {
             this.active = !1, this.container = document.getElementById("home"), this.content = document.getElementById("homeContent"), this.topContent = document.getElementById("homeContentTop"), this.topContentTitle = document.getElementById("homeContentTitle"), this.topContentSubtitle = document.getElementById("homeContentSubtitle"), this.bottomContent = document.getElementById("homeContentBottom"), this.bottomContentIntro = document.getElementById("homeContentIntro"), this.bottomContentEnterBtn = document.getElementById("homeContentEnterBtn"), this.bottomContentAboutBtn = document.getElementById("homeContentAboutBtn"), this.cloudsContainer = document.getElementById("homeClouds"), this.homeBg = document.getElementById("homeBg"), this.homeForeground = document.getElementById("homeForeground"), this.homeForeground.style.visibility = "hidden", this.foreground = s(this.homeForeground, "img", {
                 id: "homeBgForeground",
-                src: "images/home/teste.png"
+                src: "images/home/test2.png"
             }), this.homeboy = s(this.homeForeground, "img", {
                 id: "homeBgHomeboy",
                 src: "images/home/homeboy.png"
