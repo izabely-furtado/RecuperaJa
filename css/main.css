@@ -89,7 +89,7 @@ hr {
 }
 
 mark {
-	background: #ff0;
+	background: white;
 	color: #000
 }
 
@@ -620,7 +620,7 @@ body {
 
 .letter .lBottomBar .letterBottomContent .desktopLetterShare .letterShareBtn
 	{
-	color: #fffaeb
+	color: white
 }
 
 .letter .lBottomBar .letterBottomContent .desktopLetterShare .letterShareBtn:hover .letterShareBtnLabel div span.letterShareLabelReg
@@ -681,7 +681,7 @@ body {
 	width: 4px;
 	height: 4px;
 	border-radius: 5px;
-	background-color: #fffaeb
+	background-color: white
 }
 
 .letter .lBottomBar .letterBottomContent .desktopLetterShare .letterShareBtn .letterShareBtnLabel:before
@@ -762,7 +762,7 @@ body {
 }
 
 .letter .mobileLetterShare .letterShareBtn {
-	color: #fffaeb;
+	color: white;
 	width: 60px;
 	height: 43px
 }
@@ -1392,7 +1392,7 @@ body {
 
 #grid ul li {
 	float: left;
-	background-color: #faf5e8;
+	background-color: white;
 	text-align: center;
 	position: relative
 }
@@ -1579,13 +1579,13 @@ li .tamgrid
 	top: 50%;
 	margin-top: -1.1em;
 	font-size: .6em;
-	color: #fff4d6;
+	color: white;
 	opacity: 1
 }
 
 #grid ul li .gridLabelUnderline {
 	height: .1em;
-	background: #fff4d6;
+	background: white;
 	position: absolute;
 	top: 50%;
 	left: 50%;
