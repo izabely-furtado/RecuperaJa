@@ -4044,7 +4044,7 @@ var requirejs, require, define;
                                         "use strict";
 
                                         function t() {
-                                            this.moving = !1, this.instant = !1, this.container = document.getElementById("colorWipe"), this.container.style.visibility = "hidden", this.colors = [], this.colorScheme = ["#b2c8d3", "#345e86", "#6d8746"];
+                                            this.moving = !1, this.instant = !1, this.container = document.getElementById("colorWipe"), this.container.style.visibility = "hidden", this.colors = [], this.colorScheme = ["#00D4FC", "#C93214", "#144DC9"];
                                             var t;
                                             for (var r = 0; r < e; r++) t = document.getElementById("colorWipe" + (r + 1)), t.style.background = this.colorScheme[r], this.colors.push(t);
                                             this.loaderContainer = document.getElementById("colorWipeLoader"), this.treePath1 = document.getElementById("treePath1"), this.treePath2 = document.getElementById("treePath2"), this.container.addEventListener("touchstart", n)
@@ -6030,7 +6030,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "f",
                                             gridColor: "#154142",
-                                            wipeColors: ["#154142", "#ab422f", "#fff0c7"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#8db1b1",
                                             menuColor2: "#ac4232",
                                             arrowsColor1: "#8db1b1",
@@ -6047,6 +6047,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "g",
                                             gridColor: "#959a9e",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#d3d5d7",
                                             menuColor2: "#221e1f",
                                             arrowsColor1: "#d3d5d7",
@@ -6064,7 +6065,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "h",
                                             gridColor: "#6d8746",
-                                            wipeColors: ["#6d8746", "#6b3922", "#c95031"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#c6d09e",
                                             menuColor2: "#6b3922",
                                             arrowsColor1: "#c6d09e",
@@ -6082,7 +6083,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "i",
                                             gridColor: "#887942",
-                                            wipeColors: ["#887942", "#fdc76d", "#ab4230"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#ffff",
                                             menuColor2: "#f38eae",
                                             arrowsColor1: "#ffff",
@@ -6100,7 +6101,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "j",
                                             gridColor: "#fdc76d",
-                                            wipeColors: ["#fdc76d", "#8495af", "#112c3f"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#fff0c7",
                                             menuColor2: "#8495af",
                                             arrowsColor1: "#fff0c7",
@@ -6118,7 +6119,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "k",
                                             gridColor: "#112c3f",
-                                            wipeColors: ["#112c3f", "#b2c8d3", "#6d8746"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#b2c8d3",
                                             menuColor2: "#6d8746",
                                             arrowsColor1: "#b2c8d3",
@@ -6136,6 +6137,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "l",
                                             gridColor: "#65141b",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#ffd6bc",
                                             menuColor2: "#00b3ad",
                                             arrowsColor1: "#ffd6bc",
@@ -6153,7 +6155,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "m",
                                             gridColor: "#c95031",
-                                            wipeColors: ["#6b3922", "#c95031", "#f2d1cc"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#f3d0cc",
                                             menuColor2: "#c95031",
                                             arrowsColor1: "#f3d0cc",
@@ -6171,7 +6173,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "n",
                                             gridColor: "#8db1b1",
-                                            wipeColors: ["#154142", "#6d8746", "#c95031"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#dfe8e8",
                                             menuColor2: "#c95031",
                                             arrowsColor1: "#dfe8e8",
@@ -6189,7 +6191,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "o",
                                             gridColor: "#00b3ad",
-                                            wipeColors: ["#8db1b1", "#00b3ad", "#eae7be"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#eae7be",
                                             menuColor2: "#ecb1c5",
                                             arrowsColor1: "#eae7be",
@@ -6200,13 +6202,14 @@ var requirejs, require, define;
                                             underlineWidth: "0.28",
                                             contentColor: "#00b3ad",
                                             accentColor: "#eae7be",
-                                            title: "Instrumento Contratual",
+                                            title: "Redistribuição de Clientes",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "Modelos de contrato para renegociação registrando cláusulas, condições e cronograma de vencimentos do contrato."
+                                            description: "Permite ao gestor realizar a redistribuição de clientes entre as cobradoras ativas no sistema"
                                         }, {
                                             id: "p",
                                             gridColor: "#c6d09e",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#eae7be",
                                             menuColor2: "#b7a0ba",
                                             arrowsColor1: "#eae7be",
@@ -6217,14 +6220,14 @@ var requirejs, require, define;
                                             underlineWidth: "0.19",
                                             contentColor: "#6b3922",
                                             accentColor: "#b7a0ba",
-                                            title: "Redistribuição de Clientes",
+                                            title: "Instrumento Contratual",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "Permite ao gestor realizar a redistribuição de clientes entre as cobradoras ativas no sistema"
+                                            description: "Modelos de contrato para renegociação registrando cláusulas, condições e cronograma de vencimentos do contrato."
                                         }, {
                                             id: "q",
                                             gridColor: "#00b3ad",
-                                            wipeColors: ["#00b3ad", "#fdc76d", "#ff897b"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#fff0c7",
                                             menuColor2: "#ff897b",
                                             arrowsColor1: "#fff0c7",
@@ -6242,7 +6245,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "r",
                                             gridColor: "#c95031",
-                                            wipeColors: ["#b2c8d3", "#fdc76d", "#345e86"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#fff0c7",
                                             menuColor2: "#345e86",
                                             arrowsColor1: "#fff0c7",
@@ -6260,7 +6263,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "s",
                                             gridColor: "#6b3922",
-                                            wipeColors: ["#6b3922", "#f5b591", "#6d8746"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#6b3922",
                                             menuColor2: "#fff7d8",
                                             arrowsColor1: "#6b3922",
@@ -6278,7 +6281,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "t",
                                             gridColor: "#221e1f",
-                                            wipeColors: ["#00b3ad", "#eae7be", "#84898d"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#eae7be",
                                             menuColor2: "#595e61",
                                             arrowsColor1: "#eae7be",
@@ -6296,7 +6299,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "u",
                                             gridColor: "#f38eae",
-                                            wipeColors: ["#ecb1c5", "#00b3ad", "white"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#fff7d8",
                                             menuColor2: "#00b3ad",
                                             arrowsColor1: "#fff7d8",
@@ -6314,6 +6317,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "v",
                                             gridColor: "#ab422f",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#fff0c7",
                                             menuColor2: "#ab422f",
                                             arrowsColor1: "#fff0c7",
@@ -6331,7 +6335,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "w",
                                             gridColor: "#221e1f",
-                                            wipeColors: ["#221e1f", "#b7a0ba", "white"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#d9be21",
                                             menuColor2: "#b7a0ba",
                                             arrowsColor1: "#d9be21",
@@ -6349,7 +6353,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "x",
                                             gridColor: "#ecb1c5",
-                                            wipeColors: ["#ecb1c5", "#fff0c7", "#221e1f"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#fff0c7",
                                             menuColor2: "#221e1f",
                                             arrowsColor1: "#fff0c7",
@@ -6367,7 +6371,7 @@ var requirejs, require, define;
                                         }, {
                                             id: "y",
                                             gridColor: "#b2c8d3",
-                                            wipeColors: ["#b2c8d3", "#d78936", "#345e86"],
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#345e86",
                                             menuColor2: "#d78936",
                                             arrowsColor1: "#345e86",

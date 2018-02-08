@@ -566,7 +566,7 @@ body {
 
 .letter .lBottomBar .letterBottomContent .letterTitle {
 	position: relative;
-	font-size: .4em;
+	font-size: .3em;
 	text-transform: uppercase;
 	letter-spacing: 0.045em;
 	margin-bottom: 0.32em;
@@ -579,7 +579,7 @@ body {
 	width: 1em;
 	height: 0.05em;
 	position: absolute;
-	top: .42em
+	top: .35em
 }
 
 .letter .lBottomBar .letterBottomContent .letterBottomContentLower {
