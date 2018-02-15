@@ -5294,7 +5294,7 @@ var requirejs, require, define;
             } else r = !0;
         if (n) {
             var s = typeof t.createGain == "undefined" ? t.createGainNode() : t.createGain();
-            s.gain.value = 1, s.connect(t.destination)
+            s.setTargetAtTime = 1, s.connect(t.destination)
         }
         var o = function (e) {
             this._volume = 1, this._muted = !1, this.usingWebAudio = n, this.ctx = t, this.noAudio = r, this._howls = [], this._codecs = e, this.iOSAutoEnable = !0
@@ -5304,13 +5304,13 @@ var requirejs, require, define;
                 var t = this;
                 e = parseFloat(e);
                 if (e >= 0 && e <= 1) {
-                    t._volume = e, n && (s.gain.value = e);
+                    t._volume = e, n && (s.setTargetAtTime = e);
                     for (var r in t._howls)
                         if (t._howls.hasOwnProperty(r) && t._howls[r]._webAudio === !1)
                             for (var i = 0; i < t._howls[r]._audioNode.length; i++) t._howls[r]._audioNode[i].volume = t._howls[r]._volume * t._volume;
                     return t
                 }
-                return n ? s.gain.value : t._volume
+                return n ? s.setTargetAtTime : t._volume
             },
             mute: function () {
                 return this._setMuted(!0), this
@@ -5320,7 +5320,7 @@ var requirejs, require, define;
             },
             _setMuted: function (e) {
                 var t = this;
-                t._muted = e, n && (s.gain.value = e ? 0 : t._volume);
+                t._muted = e, n && (s.setTargetAtTime = e ? 0 : t._volume);
                 for (var r in t._howls)
                     if (t._howls.hasOwnProperty(r) && t._howls[r]._webAudio === !1)
                         for (var i = 0; i < t._howls[r]._audioNode.length; i++) t._howls[r]._audioNode[i].muted = e
@@ -5437,7 +5437,7 @@ var requirejs, require, define;
                             if (r._webAudio) {
                                 var c = r._sprite[e][0] / 1e3,
                             h = r._sprite[e][1] / 1e3;
-                                i.id = a, i.paused = !1, d(r, [u, c, h], a), r._playStart = t.currentTime, i.gain.value = r._volume, typeof i.bufferSource.start == "undefined" ? u ? i.bufferSource.noteGrainOn(0, s, 86400) : i.bufferSource.noteGrainOn(0, s, o) : u ? i.bufferSource.start(0, s, 86400) : i.bufferSource.start(0, s, o)
+                                i.id = a, i.paused = !1, d(r, [u, c, h], a), r._playStart = t.currentTime, i.setTargetAtTime = r._volume, typeof i.bufferSource.start == "undefined" ? u ? i.bufferSource.noteGrainOn(0, s, 86400) : i.bufferSource.noteGrainOn(0, s, o) : u ? i.bufferSource.start(0, s, 86400) : i.bufferSource.start(0, s, o)
                             } else {
                                 if (!(i.readyState === 4 || !i.readyState && navigator.isCocoonJS)) return r._clearEndTimer(a),
                             function () {
@@ -5497,7 +5497,7 @@ var requirejs, require, define;
                             t.mute(e)
                         }), t;
                         var n = e ? t._nodeById(e) : t._activeNode();
-                        return n && (t._webAudio ? n.gain.value = 0 : n.muted = !0), t
+                        return n && (t._webAudio ? n.setTargetAtTime = 0 : n.muted = !0), t
                     },
                     unmute: function (e) {
                         var t = this;
@@ -5505,7 +5505,7 @@ var requirejs, require, define;
                             t.unmute(e)
                         }), t;
                         var n = e ? t._nodeById(e) : t._activeNode();
-                        return n && (t._webAudio ? n.gain.value = t._volume : n.muted = !1), t
+                        return n && (t._webAudio ? n.setTargetAtTime = t._volume : n.muted = !1), t
                     },
                     volume: function (e, t) {
                         var n = this;
@@ -5516,7 +5516,7 @@ var requirejs, require, define;
                                 n.volume(e, t)
                             }), n;
                             var r = t ? n._nodeById(t) : n._activeNode();
-                            return r && (n._webAudio ? r.gain.value = e : r.volume = e * f.volume()), n
+                            return r && (n._webAudio ? r.setTargetAtTime = e : r.volume = e * f.volume()), n
                         }
                         return n._volume
                     },
@@ -5649,7 +5649,7 @@ var requirejs, require, define;
                             var e = this,
                     n = e._audioNode,
                     r = e._audioNode.length;
-                            return n[r] = typeof t.createGain == "undefined" ? t.createGainNode() : t.createGain(), n[r].gain.value = e._volume, n[r].paused = !0, n[r]._pos = 0, n[r].readyState = 4, n[r].connect(s), n[r].panner = t.createPanner(), n[r].panner.panningModel = e._model || "equalpower", n[r].panner.setPosition(e._pos3d[0], e._pos3d[1], e._pos3d[2]), n[r].panner.connect(n[r]), n[r]
+                            return n[r] = typeof t.createGain == "undefined" ? t.createGainNode() : t.createGain(), n[r].setTargetAtTime = e._volume, n[r].paused = !0, n[r]._pos = 0, n[r].readyState = 4, n[r].connect(s), n[r].panner = t.createPanner(), n[r].panner.panningModel = e._model || "equalpower", n[r].panner.setPosition(e._pos3d[0], e._pos3d[1], e._pos3d[2]), n[r].panner.connect(n[r]), n[r]
                         },
                         on: function (e, t) {
                             var n = this,
@@ -5957,22 +5957,22 @@ var requirejs, require, define;
                                             description: "O Sistema de Recuperação de Crédito será utilizado pelas áreas gestoras, gerentes das áreas de negócio (agências), usuários comuns da ARCRE, cobradoras de crédito, Call Center e diretoria, conforme suas permissões de acesso, que variam de acordo com suas necessidades e características específicas."
                                         }, {
                                             id: "b",
-                                            gridColor: "#144DC9",
+                                            gridColor: "#c93214",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#ffff",
+                                            menuColor1: "#000000",
                                             menuColor2: "#C93214",
-                                            arrowsColor1: "#ffff",
+                                            arrowsColor1: "#000000",
                                             arrowsColor2: "#C93214",
                                             mobileMenuColor1: "#00D4FC",
-                                            mobileMenuColor2: "#C93214",
+                                            mobileMenuColor2: "#000000",
                                             imageCenter: "0.5",
-                                            underlineWidth: "0.20",
-                                            contentColor: "#C93214",
-                                            accentColor: "#f5b38c",
-                                            title: "Régua de Cobrança",
+                                            underlineWidth: "0.30",
+                                            contentColor: "#000000",
+                                            accentColor: "#fdc76d",
+                                            title: "Bom pra você e quem te deve",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "O princípio de réguas de cobrança estabelece sequencia de processos padrões para encaminhamento de cobrança administrativa. Nessa fase ainda não estão ativadas as ações judiciais, que oneram os custos e demandam maior tempo de realização de cobranças."
+                                            description: "Processo de Política de Renegociação que permite o vínculo da Linha de Renegociação ao produto de crédito, complementando o conjunto de regras adotadas para uma renegociação."
                                         }, {
                                             id: "c",
                                             gridColor: "#C93214",
@@ -5993,59 +5993,42 @@ var requirejs, require, define;
                                             description: "Através da definição de ações de cobrança é feita a programação de contatos para regularização de prestações em atraso, na qual pode ser aumentada a severidade processual, que pode desembocar em restrição juntos os serviços de proteção ao crédito(SPC/SERASA)."
                                         }, {
                                             id: "d",
-                                            gridColor: "#000",
+                                            gridColor: "#bfc4c8",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#ffff",
-                                            menuColor2: "#00D4FC",
-                                            arrowsColor1: "#ffff",
-                                            arrowsColor2: "#00D4FC",
-                                            mobileMenuColor1: "#000000",
-                                            mobileMenuColor2: "#ffff",
-                                            imageCenter: "0.5",
-                                            underlineWidth: "0.20",
-                                            contentColor: "#000",
-                                            accentColor: "#f5b38c",
-                                            title: "Trâmite de Ações",
-                                            titleOffset: "-0.05",
-                                            subtitle: "37x Cartons",
-                                            description: "Dentro do trâmite das ações de cobrança é permitido que o próprio agente cobrador possa encaminhar solicitações de acordo ou renegociações dentro dos limites definidos na política de crédito. Todos os contatos e ações executadas ou não fazem parte de dossiê de cliente, que permite avaliar a real situação no foco de Recuperação de Crédito."
-                                        }, {
-                                            id: "e",
-                                            gridColor: "#FC7A3F",
-                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#ffff",
-                                            menuColor2: "#00D4FC",
-                                            arrowsColor1: "#ffff",
-                                            arrowsColor2: "#00D4FC",
-                                            mobileMenuColor1: "#fc7a3f",
-                                            mobileMenuColor2: "#ffff",
-                                            imageCenter: "0.5",
-                                            underlineWidth: "0.20",
-                                            contentColor: "#C93214",
-                                            accentColor: "#f5b38c",
-                                            title: "Relatório Gerencial",
-                                            titleOffset: "-0.06",
-                                            subtitle: "37x Cartons",
-                                            description: "Acompanhamento personalizado que permite dar uma visão de performance de recuperação de créditos em atraso."
-                                        }, {
-                                            id: "f",
-                                            gridColor: "#636363",
-                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#ffffff",
-                                            menuColor2: "#C93214",
-                                            arrowsColor1: "#ffffff",
-                                            arrowsColor2: "#C93214",
-                                            mobileMenuColor1: "#636363",
-                                            mobileMenuColor2: "#ffffff",
+                                            menuColor1: "#000000",
+                                            menuColor2: "#144DC9",
+                                            arrowsColor1: "#000000",
+                                            arrowsColor2: "#144DC9",
+                                            mobileMenuColor1: "#bfc4c8",
+                                            mobileMenuColor2: "#000000",
                                             imageCenter: "0.5",
                                             underlineWidth: "0.15",
-                                            contentColor: "#636363",
-                                            accentColor: "#8db1b1",
-                                            title: "Cobradoras",
+                                            contentColor: "#000000",
+                                            accentColor: "#000000",
+                                            title: "Documentos de Alerta",
                                             titleOffset: "-0.06",
-                                            description: "Empresas terceirizadas utilizadas como estratégia de cobrança são gerenciadas para recuperação de crédito para qual é atribuída a responsabilidade de cobrar os contratos em atraso a ela designados."
+                                            subtitle: "37x Cartons",
+                                            description: "Documentos padrões a serem endereçados aos clientes na forma de correspondências. Isto é, aviso que descrevem ações já realizadas pelo banco, dando ciência dos custos já assumidos pelo banco, inclusão no SPC/SERASA e Ação Judicial."
                                         }, {
-                                            id: "g",
+                                            id: "e",
+                                            gridColor: "#27e1f7",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
+                                            menuColor1: "#000000",
+                                            menuColor2: "#ffffff",
+                                            arrowsColor1: "#000000",
+                                            arrowsColor2: "#ffffff",
+                                            mobileMenuColor1: "#00D4FC",
+                                            mobileMenuColor2: "#000000",
+                                            imageCenter: "0.5",
+                                            underlineWidth: "0.28",
+                                            contentColor: "#000000",
+                                            accentColor: "#ecb1c5",
+                                            title: "Execução",
+                                            titleOffset: "0.02",
+                                            subtitle: "37x Cartons",
+                                            description: "De acordo com os perfis de usuários definido nos PROCEDIMENTOS DE COBRANÇA DE INADIMPLENTES são designadas ações a serem feitas de acordo com as características de saldo e maior tempo de atraso da dívida."
+                                        }, {
+                                            id: "f",
                                             gridColor: "#27e1f7",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#00D4FC",
@@ -6063,41 +6046,59 @@ var requirejs, require, define;
                                             subtitle: "37x Cartons",
                                             description: "Agências do Banese com todas as informações que servirão de base para execução de outras funcionalidades, como por exemplo, email à pessoa responsável pela Cobrança."
                                         }, {
-                                            id: "h",
-                                            gridColor: "#144DC9",
+                                            id: "g",
+                                            gridColor: "#FC7A3F",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#ffffff",
-                                            menuColor2: "#C93214",
-                                            arrowsColor1: "#ffffff",
-                                            arrowsColor2: "#C93214",
-                                            mobileMenuColor1: "#144DC9",
+                                            menuColor1: "#ffff",
+                                            menuColor2: "#00D4FC",
+                                            arrowsColor1: "#ffff",
+                                            arrowsColor2: "#00D4FC",
+                                            mobileMenuColor1: "#fc7a3f",
                                             mobileMenuColor2: "#ffff",
                                             imageCenter: "0.5",
-                                            underlineWidth: "0.24",
-                                            contentColor: "#144DC9",
-                                            accentColor: "#c6d09e",
-                                            title: "Canal de Cobrança",
-                                            titleOffset: "-0.05",
-                                            subtitle: "37x Cartons",
-                                            description: "O gerenciamento é feio através de um Canal de Cobrança, onde o usuário com permissão de acesso ao sistema pode ou não possuir alçada para conceder desconto no momento das negociações. Ex: Agência, Call Center, Jurídico, etc."
-                                        }, {
-                                            id: "i",
-                                            gridColor: "#c93214",
-                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#C93214",
-                                            menuColor2: "#144DC9",
-                                            arrowsColor1: "#C93214",
-                                            arrowsColor2: "#144DC9",
-                                            mobileMenuColor1: "#00D4FC",
-                                            mobileMenuColor2: "#C93214",
-                                            imageCenter: "0.5",
-                                            underlineWidth: "0.07",
+                                            underlineWidth: "0.20",
                                             contentColor: "#C93214",
-                                            accentColor: "#fdc76d",
-                                            title: "Acompanhamento",
+                                            accentColor: "#f5b38c",
+                                            title: "Relatório Gerencial",
                                             titleOffset: "-0.06",
                                             subtitle: "37x Cartons",
-                                            description: "Possibilitamos a geração de informações de acompanhamento das cobranças realizadas canais de cobrança responsáveis. Administra seus processos de Cobrança e Fecha Acordos!"
+                                            description: "Acompanhamento personalizado que permite dar uma visão de performance de recuperação de créditos em atraso."
+                                        }, {
+                                            id: "h",
+                                            gridColor: "#144dc9",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
+                                            menuColor1: "#144DC9",
+                                            menuColor2: "#C93214",
+                                            arrowsColor1: "#144DC9",
+                                            arrowsColor2: "#C93214",
+                                            mobileMenuColor1: "#144DC9",
+                                            mobileMenuColor2: "#00D4FC",
+                                            imageCenter: "0.5",
+                                            underlineWidth: "0.37",
+                                            contentColor: "#144DC9",
+                                            accentColor: "#00D4FC",
+                                            title: "Wiccan spellbook",
+                                            titleOffset: "-0.04",
+                                            subtitle: "37x Cartons",
+                                            description: "It will behoove you to find favor with the goddess. May she bless your fleece with many zippered pockets."
+                                        }, {
+                                            id: "i",
+                                            gridColor: "#fc7a40",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
+                                            menuColor1: "#000000",
+                                            menuColor2: "#ffffff",
+                                            arrowsColor1: "#000000",
+                                            arrowsColor2: "#ffffff",
+                                            mobileMenuColor1: "#fc7a40",
+                                            mobileMenuColor2: "#000000",
+                                            imageCenter: "0.5",
+                                            underlineWidth: "0.27",
+                                            contentColor: "#C93214",
+                                            accentColor: "#000000",
+                                            title: "Índice Financeiro",
+                                            titleOffset: "-0.02",
+                                            subtitle: "37x Cartons",
+                                            description: "Permite o cadastro e manutenção de Índice Financeiro. Após a inclusão o sistema automaticamente atualiza a cotação. É possível também a atualização de forma manual da cotação, determinando seu percentual e período de vigência."
                                         }, {
                                             id: "j",
                                             gridColor: "#000000",
@@ -6112,7 +6113,7 @@ var requirejs, require, define;
                                             underlineWidth: "0.15",
                                             contentColor: "#000000",
                                             accentColor: "#fdc76d",
-                                            title: "Métodos Usados",
+                                            title: "Jeitos Usados",
                                             titleOffset: "0.03",
                                             subtitle: "37x Cartons",
                                             description: "Ligação Telefônica, SMS, Empresas Cobradoras Terceirizadas, Compra de Dívidas, Renegociação..."
@@ -6136,22 +6137,22 @@ var requirejs, require, define;
                                             description: "A negociação de pagamento pode ser feita através dos equipamentos eletrônicos do Banco, para comunicados a clientes inadimplentes de sua dívida."
                                         }, {
                                             id: "l",
-                                            gridColor: "#bfc4c8",
+                                            gridColor: "#000",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#000000",
-                                            menuColor2: "#144DC9",
-                                            arrowsColor1: "#000000",
-                                            arrowsColor2: "#144DC9",
-                                            mobileMenuColor1: "#bfc4c8",
-                                            mobileMenuColor2: "#000000",
+                                            menuColor1: "#ffff",
+                                            menuColor2: "#00D4FC",
+                                            arrowsColor1: "#ffff",
+                                            arrowsColor2: "#00D4FC",
+                                            mobileMenuColor1: "#000000",
+                                            mobileMenuColor2: "#ffff",
                                             imageCenter: "0.5",
-                                            underlineWidth: "0.15",
-                                            contentColor: "#000000",
-                                            accentColor: "#000000",
-                                            title: "Correspondência",
-                                            titleOffset: "-0.06",
+                                            underlineWidth: "0.20",
+                                            contentColor: "#000",
+                                            accentColor: "#f5b38c",
+                                            title: "Trâmite de Ações",
+                                            titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "Documentos padrões a serem endereçados aos clientes na forma de correspondências. Isto é, aviso que descrevem ações já realizadas pelo banco, dando ciência dos custos já assumidos pelo banco, inclusão no SPC/SERASA e Ação Judicial."
+                                            description: "Dentro do trâmite das ações de cobrança é permitido que o próprio agente cobrador possa encaminhar solicitações de acordo ou renegociações dentro dos limites definidos na política de crédito. Todos os contatos e ações executadas ou não fazem parte de dossiê de cliente, que permite avaliar a real situação no foco de Recuperação de Crédito."
                                         }, {
                                             id: "m",
                                             gridColor: "#000000",
@@ -6172,42 +6173,6 @@ var requirejs, require, define;
                                             description: "Exibe as metas alcançadas pelas Cobradoras por período de validade da meta, conforme montante de valor dos contratos recuperados pagos."
                                         }, {
                                             id: "n",
-                                            gridColor: "#fc7a40",
-                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#000000",
-                                            menuColor2: "#ffffff",
-                                            arrowsColor1: "#000000",
-                                            arrowsColor2: "#ffffff",
-                                            mobileMenuColor1: "#fc7a40",
-                                            mobileMenuColor2: "#000000",
-                                            imageCenter: "0.5",
-                                            underlineWidth: "0.27",
-                                            contentColor: "#C93214",
-                                            accentColor: "#000000",
-                                            title: "Índice Financeiro",
-                                            titleOffset: "-0.02",
-                                            subtitle: "37x Cartons",
-                                            description: "Permite o cadastro e manutenção de Índice Financeiro. Após a inclusão o sistema automaticamente atualiza a cotação. É possível também a atualização de forma manual da cotação, determinando seu percentual e período de vigência."
-                                        }, {
-                                            id: "o",
-                                            gridColor: "#144dc9",
-                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#ffffff",
-                                            menuColor2: "#C93214",
-                                            arrowsColor1: "#ffffff",
-                                            arrowsColor2: "#C93214",
-                                            mobileMenuColor1: "#144DC9",
-                                            mobileMenuColor2: "#ffffff",
-                                            imageCenter: "0.5",
-                                            underlineWidth: "0.28",
-                                            contentColor: "#144DC9",
-                                            accentColor: "#eae7be",
-                                            title: "Redistribuição de Clientes",
-                                            titleOffset: "-0.05",
-                                            subtitle: "37x Cartons",
-                                            description: "Permite ao gestor realizar a redistribuição de clientes entre as cobradoras ativas no sistema"
-                                        }, {
-                                            id: "p",
                                             gridColor: "#000000",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#000000",
@@ -6220,13 +6185,31 @@ var requirejs, require, define;
                                             underlineWidth: "0.19",
                                             contentColor: "#C93214",
                                             accentColor: "#b7a0ba",
-                                            title: "Instrumento Contratual",
+                                            title: "Norma Contratual",
                                             titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
                                             description: "Modelos de contrato para renegociação registrando cláusulas, condições e cronograma de vencimentos do contrato."
                                         }, {
-                                            id: "q",
-                                            gridColor: "#c93214",
+                                            id: "o",
+                                            gridColor: "#27e1f7",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
+                                            menuColor1: "#ffffff",
+                                            menuColor2: "#C93214",
+                                            arrowsColor1: "#ffffff",
+                                            arrowsColor2: "#C93214",
+                                            mobileMenuColor1: "#00D4FC",
+                                            mobileMenuColor2: "#C93214",
+                                            imageCenter: "0.5",
+                                            underlineWidth: "0.23",
+                                            contentColor: "#C93214",
+                                            accentColor: "#f1955f",
+                                            title: "Relatório Operacional",
+                                            titleOffset: "0",
+                                            subtitle: "37x Cartons",
+                                            description: "Acompanhamento personalizado que permite dar uma visão operacional do trabalho de COBRANÇA."
+                                        }, {
+                                            id: "p",
+                                            gridColor: "#000000",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#000000",
                                             menuColor2: "#C93214",
@@ -6235,15 +6218,15 @@ var requirejs, require, define;
                                             mobileMenuColor1: "#00D4FC",
                                             mobileMenuColor2: "#000000",
                                             imageCenter: "0.5",
-                                            underlineWidth: "0.30",
+                                            underlineWidth: "0.26",
                                             contentColor: "#000000",
-                                            accentColor: "#fdc76d",
-                                            title: "Renegociação",
-                                            titleOffset: "-0.05",
+                                            accentColor: "#8295af",
+                                            title: "Política de Cobrança",
+                                            titleOffset: "-0.02",
                                             subtitle: "37x Cartons",
-                                            description: "Processo de Política de Renegociação que permite o vínculo da Linha de Renegociação ao produto de crédito, complementando o conjunto de regras adotadas para uma renegociação."
+                                            description: "São cadastrados alguns parâmetros globais do sistema utilizados para o processo de recuperação do crédito, tornando o processo de recuperação mais eficaz."
                                         }, {
-                                            id: "r",
+                                            id: "q",
                                             gridColor: "#27e1f7",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#C93214",
@@ -6261,23 +6244,41 @@ var requirejs, require, define;
                                             subtitle: "37x Cartons",
                                             description: "Permite a emissão de relatório com informações de contratos na fase de retorno de ocorrências no processo de protesto, ou seja, Título aceito no cartório. Conforme retorno de arquivo e com a situação de protesto devolvido, o sistema identifica os títulos que estão na situação de acordo com o filtro de pesquisa selecionado."
                                         }, {
-                                            id: "s",
-                                            gridColor: "#000000",
+                                            id: "r",
+                                            gridColor: "#144DC9",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#C93214",
-                                            menuColor2: "#00D4FC",
-                                            arrowsColor1: "#C93214",
-                                            arrowsColor2: "#00D4FC",
-                                            mobileMenuColor1: "#000000",
+                                            menuColor1: "#ffff",
+                                            menuColor2: "#C93214",
+                                            arrowsColor1: "#ffff",
+                                            arrowsColor2: "#C93214",
+                                            mobileMenuColor1: "#00D4FC",
                                             mobileMenuColor2: "#C93214",
                                             imageCenter: "0.5",
-                                            underlineWidth: "0.19",
-                                            contentColor: "#000000",
+                                            underlineWidth: "0.20",
+                                            contentColor: "#C93214",
                                             accentColor: "#f5b38c",
-                                            title: "Títulos Não-Processados",
-                                            titleOffset: "-0.03",
+                                            title: "Régua de Cobrança",
+                                            titleOffset: "-0.05",
                                             subtitle: "37x Cartons",
-                                            description: "Permite a pesquisa e emissão de relatório com informações de contratos enviados via arquivo para execução de protesto. O cartório recebe o arquivo e processa a leitura do mesmo, conforme a identificação de alguma irregularidade de algum registro, este retorna com a informação do código(s) da(s) irregularidade(s)."
+                                            description: "O princípio de réguas de cobrança estabelece sequencia de processos padrões para encaminhamento de cobrança administrativa. Nessa fase ainda não estão ativadas as ações judiciais, que oneram os custos e demandam maior tempo de realização de cobranças."
+                                        }, {
+                                            id: "s",
+                                            gridColor: "#c93214",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
+                                            menuColor1: "#C93214",
+                                            menuColor2: "#000000",
+                                            arrowsColor1: "#C93214",
+                                            arrowsColor2: "#000000",
+                                            mobileMenuColor1: "#00D4FC",
+                                            mobileMenuColor2: "#000000",
+                                            imageCenter: "0.5",
+                                            underlineWidth: "0.26",
+                                            contentColor: "#C93214",
+                                            accentColor: "#b2c8d3",
+                                            title: "Solução = Cobrar",
+                                            titleOffset: "0",
+                                            subtitle: "37x Cartons",
+                                            description: "Visualizando informações do clientes e negociando contratos em atraso. Através de ações de cobrança é feita a programação de contatos para regularização de prestações em atraso, na qual pode ser aumentada a severidade processual, que pode desembocar em restrição juntos os serviços de proteção ao crédito(SPC/SERASA)."
                                         }, {
                                             id: "t",
                                             gridColor: "#c93214",
@@ -6316,94 +6317,93 @@ var requirejs, require, define;
                                             description: "Para o perfeito funcionamento do sistema parametrizações básicas serão realizadas que permitem a manutenção dos parâmetros globais do sistema."
                                         }, {
                                             id: "v",
-                                            gridColor: "#000000",
-                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#000000",
-                                            menuColor2: "#C93214",
-                                            arrowsColor1: "#000000",
-                                            arrowsColor2: "#C93214",
-                                            mobileMenuColor1: "#00D4FC",
-                                            mobileMenuColor2: "#000000",
-                                            imageCenter: "0.5",
-                                            underlineWidth: "0.26",
-                                            contentColor: "#000000",
-                                            accentColor: "#8295af",
-                                            title: "Política de Cobrança",
-                                            titleOffset: "-0.02",
-                                            subtitle: "37x Cartons",
-                                            description: "São cadastrados alguns parâmetros globais do sistema utilizados para o processo de recuperação do crédito, tornando o processo de recuperação mais eficaz."
-                                        }, {
-                                            id: "w",
-                                            gridColor: "#144dc9",
-                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#144DC9",
-                                            menuColor2: "#C93214",
-                                            arrowsColor1: "#144DC9",
-                                            arrowsColor2: "#C93214",
-                                            mobileMenuColor1: "#144DC9",
-                                            mobileMenuColor2: "#00D4FC",
-                                            imageCenter: "0.5",
-                                            underlineWidth: "0.37",
-                                            contentColor: "#144DC9",
-                                            accentColor: "#00D4FC",
-                                            title: "Wiccan spellbook",
-                                            titleOffset: "-0.04",
-                                            subtitle: "37x Cartons",
-                                            description: "It will behoove you to find favor with the goddess. May she bless your fleece with many zippered pockets."
-                                        }, {
-                                            id: "x",
-                                            gridColor: "#27e1f7",
-                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#000000",
-                                            menuColor2: "#ffffff",
-                                            arrowsColor1: "#000000",
-                                            arrowsColor2: "#ffffff",
-                                            mobileMenuColor1: "#00D4FC",
-                                            mobileMenuColor2: "#000000",
-                                            imageCenter: "0.5",
-                                            underlineWidth: "0.28",
-                                            contentColor: "#000000",
-                                            accentColor: "#ecb1c5",
-                                            title: "Execução",
-                                            titleOffset: "0.02",
-                                            subtitle: "37x Cartons",
-                                            description: "De acordo com os perfis de usuários definido nos PROCEDIMENTOS DE COBRANÇA DE INADIMPLENTES são designadas ações a serem feitas de acordo com as características de saldo e maior tempo de atraso da dívida."
-                                        }, {
-                                            id: "y",
-                                            gridColor: "#c93214",
-                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
-                                            menuColor1: "#C93214",
-                                            menuColor2: "#000000",
-                                            arrowsColor1: "#C93214",
-                                            arrowsColor2: "#000000",
-                                            mobileMenuColor1: "#00D4FC",
-                                            mobileMenuColor2: "#000000",
-                                            imageCenter: "0.5",
-                                            underlineWidth: "0.26",
-                                            contentColor: "#C93214",
-                                            accentColor: "#b2c8d3",
-                                            title: "Cobrança",
-                                            titleOffset: "0",
-                                            subtitle: "37x Cartons",
-                                            description: "Visualizando informações do clientes e negociando contratos em atraso."
-                                        }, {
-                                            id: "z",
-                                            gridColor: "#27e1f7",
+                                            gridColor: "#144DC9",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#ffffff",
                                             menuColor2: "#C93214",
                                             arrowsColor1: "#ffffff",
                                             arrowsColor2: "#C93214",
+                                            mobileMenuColor1: "#144DC9",
+                                            mobileMenuColor2: "#ffff",
+                                            imageCenter: "0.5",
+                                            underlineWidth: "0.24",
+                                            contentColor: "#144DC9",
+                                            accentColor: "#c6d09e",
+                                            title: "Via de Cobrança",
+                                            titleOffset: "-0.05",
+                                            subtitle: "37x Cartons",
+                                            description: "O gerenciamento é feio através de um Canal de Cobrança, onde o usuário com permissão de acesso ao sistema pode ou não possuir alçada para conceder desconto no momento das negociações. Ex: Agência, Call Center, Jurídico, etc."
+                                        }, {
+                                            id: "w",
+                                            gridColor: "#c93214",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
+                                            menuColor1: "#C93214",
+                                            menuColor2: "#144DC9",
+                                            arrowsColor1: "#C93214",
+                                            arrowsColor2: "#144DC9",
                                             mobileMenuColor1: "#00D4FC",
                                             mobileMenuColor2: "#C93214",
                                             imageCenter: "0.5",
-                                            underlineWidth: "0.23",
+                                            underlineWidth: "0.07",
                                             contentColor: "#C93214",
-                                            accentColor: "#f1955f",
-                                            title: "Relatório Operacional",
-                                            titleOffset: "0",
+                                            accentColor: "#fdc76d",
+                                            title: "What/Why/Where/When/Who",
+                                            titleOffset: "-0.06",
                                             subtitle: "37x Cartons",
-                                            description: "Acompanhamento personalizado que permite dar uma visão operacional do trabalho de COBRANÇA."
+                                            description: "Possibilitamos a geração de informações de acompanhamento das cobranças realizadas canais de cobrança responsáveis para não haver dúvidas de como andam as coisas. Administrando seus processos de Cobrança e Fechando Acordos!"
+                                        }, {
+                                            id: "x",
+                                            gridColor: "#636363",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
+                                            menuColor1: "#ffffff",
+                                            menuColor2: "#C93214",
+                                            arrowsColor1: "#ffffff",
+                                            arrowsColor2: "#C93214",
+                                            mobileMenuColor1: "#636363",
+                                            mobileMenuColor2: "#ffffff",
+                                            imageCenter: "0.5",
+                                            underlineWidth: "0.15",
+                                            contentColor: "#636363",
+                                            accentColor: "#8db1b1",
+                                            title: "Cobradoras",
+                                            titleOffset: "-0.06",
+                                            description: "Empresas terceirizadas utilizadas como estratégia de cobrança são gerenciadas para recuperação de crédito para qual é atribuída a responsabilidade de cobrar os contratos em atraso a ela designados."
+                                        }, {
+                                            id: "y",
+                                            gridColor: "#000000",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
+                                            menuColor1: "#C93214",
+                                            menuColor2: "#00D4FC",
+                                            arrowsColor1: "#C93214",
+                                            arrowsColor2: "#00D4FC",
+                                            mobileMenuColor1: "#000000",
+                                            mobileMenuColor2: "#C93214",
+                                            imageCenter: "0.5",
+                                            underlineWidth: "0.19",
+                                            contentColor: "#000000",
+                                            accentColor: "#f5b38c",
+                                            title: "Títulos Não-Processados",
+                                            titleOffset: "-0.03",
+                                            subtitle: "37x Cartons",
+                                            description: "Permite a pesquisa e emissão de relatório com informações de contratos enviados via arquivo para execução de protesto. O cartório recebe o arquivo e processa a leitura do mesmo, conforme a identificação de alguma irregularidade de algum registro, este retorna com a informação do código(s) da(s) irregularidade(s)."
+                                        }, {
+                                            id: "z",
+                                            gridColor: "#144dc9",
+                                            wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
+                                            menuColor1: "#ffffff",
+                                            menuColor2: "#C93214",
+                                            arrowsColor1: "#ffffff",
+                                            arrowsColor2: "#C93214",
+                                            mobileMenuColor1: "#144DC9",
+                                            mobileMenuColor2: "#ffffff",
+                                            imageCenter: "0.5",
+                                            underlineWidth: "0.28",
+                                            contentColor: "#144DC9",
+                                            accentColor: "#eae7be",
+                                            title: "Redistribuição de Clientes",
+                                            titleOffset: "-0.05",
+                                            subtitle: "37x Cartons",
+                                            description: "Permite ao gestor realizar a redistribuição de clientes entre as cobradoras ativas no sistema"
                                         }];
                                         e.siteSettings = {
                                             alphabet: t
