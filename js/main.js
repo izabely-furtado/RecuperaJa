@@ -5957,7 +5957,7 @@ var requirejs, require, define;
                                             description: "O Sistema de Recuperação de Crédito será utilizado pelas áreas gestoras, gerentes das áreas de negócio (agências), usuários comuns da ARCRE, cobradoras de crédito, Call Center e diretoria, conforme suas permissões de acesso, que variam de acordo com suas necessidades e características específicas."
                                         }, {
                                             id: "b",
-                                            gridColor: "#c93214",
+                                            gridColor: "#000000",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#000000",
                                             menuColor2: "#C93214",
@@ -6029,7 +6029,7 @@ var requirejs, require, define;
                                             description: "De acordo com os perfis de usuários definido nos PROCEDIMENTOS DE COBRANÇA DE INADIMPLENTES são designadas ações a serem feitas de acordo com as características de saldo e maior tempo de atraso da dívida."
                                         }, {
                                             id: "f",
-                                            gridColor: "#27e1f7",
+                                            gridColor: "#636363",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#00D4FC",
                                             menuColor2: "#C93214",
@@ -6077,10 +6077,10 @@ var requirejs, require, define;
                                             underlineWidth: "0.37",
                                             contentColor: "#144DC9",
                                             accentColor: "#00D4FC",
-                                            title: "Wiccan spellbook",
+                                            title: "How/How Much",
                                             titleOffset: "-0.04",
                                             subtitle: "37x Cartons",
-                                            description: "It will behoove you to find favor with the goddess. May she bless your fleece with many zippered pockets."
+                                            description: "Entre em contato conosco e vamos fazer uma simulação personalizada para respondermos a estas questões de acordo com a sua necessidade."
                                         }, {
                                             id: "i",
                                             gridColor: "#fc7a40",
@@ -6128,16 +6128,15 @@ var requirejs, require, define;
                                             mobileMenuColor1: "#636363",
                                             mobileMenuColor2: "#ffffff",
                                             imageCenter: "0.5",
-                                            underlineWidth: "0.24",
+                                            underlineWidth: "0.15",
                                             contentColor: "#636363",
-                                            accentColor: "#b2c8d3",
-                                            title: "Comunicação Eletrônica",
+                                            accentColor: "#8db1b1",
+                                            title: "kkkk",
                                             titleOffset: "-0.06",
-                                            subtitle: "37x Cartons",
-                                            description: "A negociação de pagamento pode ser feita através dos equipamentos eletrônicos do Banco, para comunicados a clientes inadimplentes de sua dívida."
+                                            description: "Pode rir atoa. Deixe que o serviço de cobrança seja terceirizado para cobradoras. Empresas terceirizadas são utilizadas como estratégia de cobrança são gerenciadas para recuperação de crédito para qual é atribuída a responsabilidade de cobrar os contratos em atraso a ela designados."
                                         }, {
                                             id: "l",
-                                            gridColor: "#000",
+                                            gridColor: "#C93214",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#ffff",
                                             menuColor2: "#00D4FC",
@@ -6263,7 +6262,7 @@ var requirejs, require, define;
                                             description: "O princípio de réguas de cobrança estabelece sequencia de processos padrões para encaminhamento de cobrança administrativa. Nessa fase ainda não estão ativadas as ações judiciais, que oneram os custos e demandam maior tempo de realização de cobranças."
                                         }, {
                                             id: "s",
-                                            gridColor: "#c93214",
+                                            gridColor: "#00D4FC",
                                             wipeColors: ["#144DC9", "#00D4FC", "#C93214"],
                                             menuColor1: "#C93214",
                                             menuColor2: "#000000",
@@ -6362,12 +6361,13 @@ var requirejs, require, define;
                                             mobileMenuColor1: "#636363",
                                             mobileMenuColor2: "#ffffff",
                                             imageCenter: "0.5",
-                                            underlineWidth: "0.15",
+                                            underlineWidth: "0.24",
                                             contentColor: "#636363",
-                                            accentColor: "#8db1b1",
-                                            title: "Cobradoras",
+                                            accentColor: "#b2c8d3",
+                                            title: "Comunicação Eletrônica",
                                             titleOffset: "-0.06",
-                                            description: "Empresas terceirizadas utilizadas como estratégia de cobrança são gerenciadas para recuperação de crédito para qual é atribuída a responsabilidade de cobrar os contratos em atraso a ela designados."
+                                            subtitle: "37x Cartons",
+                                            description: "A negociação de pagamento pode ser feita através dos equipamentos eletrônicos do Banco, para comunicados a clientes inadimplentes de sua dívida."
                                         }, {
                                             id: "y",
                                             gridColor: "#000000",
