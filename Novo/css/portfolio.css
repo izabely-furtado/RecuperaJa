@@ -1,0 +1,410 @@
+.portfolio-container a {
+    position:relative;
+    z-index:10;    
+}
+.portfolio-container a.active {
+    color: #fff;
+}
+
+
+
+
+/*  ===================================
+	Typografie
+	=================================== */
+
+.portfolio-container h1,
+.portfolio-container .h2	 {
+    font:normal 2.125em Geogrotesque-MediumIt, 'Trebuchet MS', sans-serif;
+    margin-bottom:.3em;
+    border-bottom: 2px solid #FFFFFF;
+    line-height: 91%;
+    padding: 0 0 0.05em;
+    text-transform:uppercase;
+}
+
+.portfolio-container h2	 {
+    position:relative;
+    font-size:1.125em;
+    border-bottom: 1px solid #FFFFFF;
+    line-height: 91%;
+    padding: 0 0 0.2em;
+    text-transform:uppercase;
+    z-index:0;
+}
+
+.portfolio-container a h2,
+.portfolio-container a:visited h2,
+.portfolio-container a:hover h2 {
+    color:#fff;
+}
+
+
+.portfolio-container h2:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -180px; 
+  height: 180px; 
+  visibility: hidden; 
+}
+
+
+.portfolio-container h3	 {
+    font:normal 1em Geogrotesque-MediumIt, 'Trebuchet MS', sans-serif;
+    margin:0;
+    line-height:115%;
+}
+
+.portfolio-container .text h3 {
+    margin-bottom:1em;
+}
+
+/*  ===================================
+	Links
+	=================================== */
+
+
+.portfolio-container .link-teaser {
+    display:block;
+}
+
+
+.portfolio-container .link-teaser .link-teaser-text {
+    display:none;
+    position:absolute;
+    width:100%;
+    left:0;
+    bottom:0;
+    height:0;
+    padding:7px 10px;
+    line-height:100%;
+    background:DodgerBlue;
+    color:#000;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    text-align:left;
+    
+}
+
+.portfolio-container .link-teaser:hover .link-teaser-text {
+    display:block;
+    height:auto;
+}
+
+.link-arrow:before {content:'→';font-size:22px;padding:0 5px 0 0;}
+
+
+
+/*  ===================================
+	content
+	=================================== */
+
+.breadcrumb {
+    padding-top:117px;    
+}
+
+.list-breadcrumb li:before {
+    content:'←';
+    font-size:22px;
+    padding:0 5px 0 0;
+}
+
+.list-breadcrumb a,
+.list-breadcrumb a:visited {
+    color:DodgerBlue;
+}
+.list-breadcrumb a:hover   {
+    color:#fff;
+}
+
+/* slider */
+.portfolio-container .slider-container {
+    position:relative; 
+    width:100%;   
+}
+
+.portfolio-container .slider-container .slide {
+    position:relative;
+    width:100%;
+    text-align:center;    
+}
+
+.portfolio-container .slider-container .slide .legend {
+    position:absolute;
+    display:block;
+    top:0;
+    left:0;
+    padding:5px 10px;
+    background:DodgerBlue; 
+    color:#000;
+}
+
+.portfolio-container .slider-back,
+.portfolio-container .slider-next {
+    display:block;
+    position:absolute;
+    top:50%;
+    left:0;
+    margin-top:-25px;
+    width:51px;
+    height:51px;
+    line-height:51px;
+    font-size:0;
+    text-indent:-999em;
+    text-align:left;
+    background:url(../images/ico/portfolio-slider.png) no-repeat 0 0; 
+}
+
+.portfolio-container .slider-next {
+    left:auto;
+    right:0;
+    background-position:0 -60px;        
+}
+
+.portfolio-container .slider-back:hover {
+    background-position:-60px 0;        
+}
+
+.portfolio-container .slider-next:hover {
+    background-position:-60px -60px;        
+}
+
+.portfolio-container .portfolio-logo {
+    text-align:right;
+    padding-top:6px;        
+}
+
+.portfolio-container .separator-title {
+    margin-top:30px;    
+}
+
+.portfolio-container .text {
+    padding:10px;
+    background:#000;  
+}
+
+/*  ===================================
+	footer
+	=================================== */
+
+
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+    position: relative;
+    margin: 0 auto 0px;
+    padding: 0;
+    *zoom: 1;
+}
+
+.bx-wrapper img {
+    margin: 0 auto;
+    max-width: 100%;
+    display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+    /*fix other elements on the page moving (on Chrome)*/
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+        -ms-transform: translatez(0);
+        -o-transform: translatez(0);
+        transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url(../images/bx_loader.gif) center center no-repeat #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+    text-align: center;
+    color: #666;
+    position:absolute;
+    display:block;
+    top:0;
+    left:0;
+    padding:5px 10px;
+    background:DodgerBlue; 
+    color:#000;
+    width: 24px;
+    height: 19px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+    left: 0px;
+    background: url(../images/ico/portfolio-slider.png) no-repeat 0 0px;
+}
+
+.bx-wrapper .bx-next {
+    right: 0px;
+    background: url(../images/ico/portfolio-slider.png) no-repeat 0 -60px;
+}
+
+.bx-wrapper .bx-prev:hover {
+    background-position: -60px 0;
+}
+
+.bx-wrapper .bx-next:hover {
+    background-position: -60px -60px;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -26px;
+    outline: 0;
+    width: 51px;
+    height: 51px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+    text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    text-indent: -9999px;
+    width: 10px;
+    height: 11px;
+    outline: 0;
+    background: url(images/controls.png) -86px -11px no-repeat;
+    margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+    background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+    display: block;
+    text-indent: -9999px;
+    width: 9px;
+    height: 11px;
+    outline: 0;
+    background: url(images/controls.png) -86px -44px no-repeat;
+    margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+    background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666\9;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+    color: #fff;
+    font-family: Arial;
+    display: block;
+    font-size: .85em;
+    padding: 10px;
+}
+
+/* =============================================================================
+   /* Mediaqueries
+   ========================================================================== */
+
+
+@media only screen and (max-width:1279px) {
+    .breadcrumb .wrap {
+        margin:0 0 0 200px;
+        width:auto;
+    }
+    
+    .breadcrumb .container-dark {
+        background:none;
+    }
+}

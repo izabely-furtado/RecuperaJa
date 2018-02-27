@@ -1,0 +1,155 @@
+/*---------------------------------------------------------------
+	POP UP
+----------------------------------------------------------------*/
+.infograph {
+  position: relative;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.infograph img {
+  width: 100%;
+  height: auto;
+}
+.infograph img.pop1 {
+  display: block;
+}
+@media (max-width: 768px) {
+  .infograph img.pop1 {
+    display: none;
+  }
+}
+.infograph img.pop2 {
+  display: none;
+}
+@media (max-width: 768px) {
+  .infograph img.pop2 {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .infograph img.pop2 {
+    display: none;
+  }
+}
+.infograph img.pop3 {
+  display: none;
+}
+@media (max-width: 480px) {
+  .infograph img.pop3 {
+    display: block;
+  }
+}
+.infograph iframe {
+  top: 44.5%;
+  width: 52.6%;
+  left: 8.3%;
+  height: 23.5%;
+}
+@media (max-width: 768px) {
+  .infograph iframe {
+    top: 35%;
+    width: 85.2%;
+    left: 7.5%;
+    height: 28.2%;
+  }
+}
+@media (max-width: 480px) {
+  .infograph iframe {
+    top: 7.5%;
+    width: 85.5%;
+    left: 7%;
+    height: 14%;
+  }
+}
+.infograph iframe {
+  position: absolute;
+}
+.infograph iframe.video-vision {
+  top: 43.9%;
+  width: 52.6%;
+  left: 8.3%;
+  height: 23.3%;
+}
+@media (max-width: 768px) {
+  .infograph iframe.video-vision {
+    top: 34.3%;
+    width: 85.3%;
+    left: 7.4%;
+    height: 28.2%;
+  }
+}
+@media (max-width: 480px) {
+  .infograph iframe.video-vision {
+    top: 12%;
+    width: 85.2%;
+    left: 7.4%;
+    height: 14.8%;
+  }
+}
+.infograph iframe.video-vision-de {
+  top: 46.2%;
+  width: 52.6%;
+  left: 8.3%;
+  height: 22%;
+}
+@media (max-width: 768px) {
+  .infograph iframe.video-vision-de {
+    top: 36.2%;
+    width: 85.3%;
+    left: 7.4%;
+    height: 27.2%;
+  }
+}
+@media (max-width: 480px) {
+  .infograph iframe.video-vision-de {
+    top: 10.7%;
+    width: 85.2%;
+    left: 7.4%;
+    height: 12.4%;
+  }
+}
+.infograph iframe.video-xtnd {
+  top: 13.2%;
+  width: 52.6%;
+  left: 8.3%;
+  height: 10.2%;
+}
+@media (max-width: 768px) {
+  .infograph iframe.video-xtnd {
+    top: 11.4%;
+    width: 90.7%;
+    left: 7.3%;
+    height: 14.5%;
+  }
+}
+@media (max-width: 480px) {
+  .infograph iframe.video-xtnd {
+    top: 5.3%;
+    width: 85.6%;
+    left: 7%;
+    height: 6.4%;
+  }
+}
+.infograph iframe.video-xtnd-de {
+  top: 12.9%;
+  width: 52.6%;
+  left: 8.3%;
+  height: 10%;
+}
+@media (max-width: 768px) {
+  .infograph iframe.video-xtnd-de {
+    top: 11.2%;
+    width: 90.7%;
+    left: 7.3%;
+    height: 14.6%;
+  }
+}
+@media (max-width: 480px) {
+  .infograph iframe.video-xtnd-de {
+    top: 5.8%;
+    width: 85.6%;
+    left: 7%;
+    height: 6.8%;
+  }
+}
